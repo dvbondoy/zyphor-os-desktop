@@ -138,17 +138,11 @@ add:
 	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
 	git commit -m "chore: update desktop environment theme package control"
 
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/desktop/icons.screen0.yaml
-	git commit -m "feat: update XFCE desktop icons configuration"
+	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/postinst
+	git commit -m "feat: add desktop environment theme postinst"
 
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
-	git commit -m "feat: update Thunar configuration"
-
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
-	git commit -m "feat: update XFCE panel configuration"
-
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/notes/
-	git commit -m "feat: add XFCE notes configuration"
+	git add pkg/v3/zyphor-os-release/
+	git commit -m "feat: add zyphor os release package"
 
 push:
 	git push origin $(branch)
@@ -217,8 +211,11 @@ release:
 # 	zyphor build package pkg/v2/zyphor-grub-theme
 # 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
-	zyphor build package pkg/v3/zyphor-desktop-environment-theme
-	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
+# 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
+# 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
+
+	zyphor build package pkg/v3/zyphor-os-release
+	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
 
 # 	---
 
