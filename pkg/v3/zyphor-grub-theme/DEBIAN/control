@@ -4,7 +4,7 @@ Section: admin
 Priority: optional
 Architecture: all
 Maintainer: Mark Jason Espelita
-Depends: grub-common
+Depends: grub2-common
 Description: Zyphor OS GRUB theme and configuration
  Provides the Zyphor OS GRUB theme, background, branding,
  and GRUB configuration drop-in.
