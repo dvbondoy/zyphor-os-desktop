@@ -12,9 +12,6 @@ configs:
       width: 1280
       height: 800
   icons:
-    "/home":
-      row: 0
-      col: 0
     "/":
       row: 1
       col: 0
@@ -25,3 +22,9 @@ configs:
       row: 3
       col: 0
       last_seen: 1789187571645137
+    "/home":
+      row: 0
+      col: 0
+    "/home":
+      row: 0
+      col: 0
