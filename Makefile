@@ -130,26 +130,25 @@ status:
 
 add:
 
+# 
+
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v2/updater/zor/DEBIAN/control
-	git commit -m "chore: update zor package control"
+	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
+	git commit -m "chore: update desktop environment theme package control"
 
-	git add pkg/v2/updater/zor/DEBIAN/postinst
-	git commit -m "chore: update zor package postinst"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/desktop/icons.screen0.yaml
+	git commit -m "feat: update XFCE desktop icons configuration"
 
-	git add pkg/v2/updater/zwn/DEBIAN/control
-	git commit -m "chore: update zwn package control"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
+	git commit -m "feat: update Thunar configuration"
 
-	git add pkg/v2/updater/zwn/usr/share/zyphor-whats-new/release.js
-	git commit -m "feat: update zyphor whats new release data"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+	git commit -m "feat: update XFCE panel configuration"
 
-	git add pkg/v2/zyphor-grub-theme/DEBIAN/control
-	git commit -m "chore: update zyphor grub theme package control"
-
-	git add pkg/v2/zyphor-grub-theme/DEBIAN/postinst
-	git commit -m "chore: update zyphor grub theme postinst"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/notes/
+	git commit -m "feat: add XFCE notes configuration"
 
 push:
 	git push origin $(branch)
