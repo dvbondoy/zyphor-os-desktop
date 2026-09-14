@@ -217,8 +217,11 @@ release:
 # 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
 # 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
 
-	zyphor build package pkg/v3/zyphor-os-release
-	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
+# 	zyphor build package pkg/v3/zyphor-os-release
+# 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
+
+	zyphor build package pkg/v3/zyphor-grub-theme
+	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
 # 	---
 
