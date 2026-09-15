@@ -202,8 +202,8 @@ release:
 # 	zyphor build package pkg/v2/zou/grub-screensaver-1
 # 	mv pkg/v2/zou/grub-screensaver-1.deb grub-screensaver-1.deb
 
-	zyphor build package pkg/v2/zyphor-grub-theme
-	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
+# 	zyphor build package pkg/v2/zyphor-grub-theme
+# 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
 # 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
@@ -214,11 +214,14 @@ release:
 # 	zyphor build package pkg/v3/zyphor-grub-theme
 # 	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
+	zyphor build package pkg/v3/zyphor-fastfetch-config
+	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
+
 # 	---
 
-	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
+# 	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
 
-# 	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
+	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
 
 # 	mv ./*.deb pkg/staging --verbose
 
