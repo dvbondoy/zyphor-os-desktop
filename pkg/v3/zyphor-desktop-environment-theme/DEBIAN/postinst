@@ -9,7 +9,7 @@ for dir in \
 do
     if [ -e "$dir" ]; then
         chown -R root:root "$dir"
-        chmod -R 555 "$dir"
+        chmod -R 755 "$dir"
     fi
 done
 
