@@ -132,14 +132,11 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
-	git commit -m "chore: update desktop environment theme package control"
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/control
+	git commit -m "chore: update zyphor grub theme package control"
 
-	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/postinst
-	git commit -m "chore: update desktop environment theme postinst"
-
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/desktop/icons.screen0.yaml
-	git commit -m "feat: update XFCE desktop icons configuration"
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/postinst
+	git commit -m "chore: update zyphor grub theme postinst"
 
 push:
 	git push origin $(branch)
@@ -205,11 +202,11 @@ release:
 # 	zyphor build package pkg/v2/zou/grub-screensaver-1
 # 	mv pkg/v2/zou/grub-screensaver-1.deb grub-screensaver-1.deb
 
-# 	zyphor build package pkg/v2/zyphor-grub-theme
-# 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
+	zyphor build package pkg/v2/zyphor-grub-theme
+	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
-	zyphor build package pkg/v3/zyphor-desktop-environment-theme
-	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
+# 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
+# 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-os-release
 # 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
@@ -219,9 +216,9 @@ release:
 
 # 	---
 
-# 	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
+	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
 
-	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
+# 	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
 
 # 	mv ./*.deb pkg/staging --verbose
 
