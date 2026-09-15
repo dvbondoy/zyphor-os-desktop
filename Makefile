@@ -135,17 +135,11 @@ add:
 	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
 	git commit -m "chore: update desktop environment theme package control"
 
+	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/postinst
+	git commit -m "chore: update desktop environment theme postinst"
+
 	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/desktop/icons.screen0.yaml
 	git commit -m "feat: update XFCE desktop icons configuration"
-
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
-	git commit -m "feat: update XFCE panel configuration"
-
-	git add pkg/v3/zyphor-os-release/DEBIAN/control
-	git commit -m "chore: update zyphor os release package control"
-
-	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screenshooter.xml
-	git commit -m "feat: add XFCE screenshooter configuration"
 
 push:
 	git push origin $(branch)
