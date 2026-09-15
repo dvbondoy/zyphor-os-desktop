@@ -132,17 +132,20 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-grub-theme/DEBIAN/control
-	git commit -m "chore: update zyphor grub theme package control"
+	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
+	git commit -m "chore: update desktop environment theme package control"
 
-	git add pkg/v3/zyphor-grub-theme/boot/boot/grub/themes/zyphor/background.png
-	git commit -m "chore: remove zyphor grub theme background"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/desktop/icons.screen0.yaml
+	git commit -m "feat: update XFCE desktop icons configuration"
 
-	git add pkg/v3/zyphor-grub-theme/boot/boot/grub/themes/zyphor/theme.txt
-	git commit -m "chore: remove zyphor grub theme configuration"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+	git commit -m "feat: update XFCE panel configuration"
 
-	git add pkg/v3/zyphor-grub-theme/boot/grub/
-	git commit -m "feat: add zyphor grub theme files"
+	git add pkg/v3/zyphor-os-release/DEBIAN/control
+	git commit -m "chore: update zyphor os release package control"
+
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screenshooter.xml
+	git commit -m "feat: add XFCE screenshooter configuration"
 
 push:
 	git push origin $(branch)
@@ -211,14 +214,14 @@ release:
 # 	zyphor build package pkg/v2/zyphor-grub-theme
 # 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
-# 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
-# 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
+	zyphor build package pkg/v3/zyphor-desktop-environment-theme
+	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-os-release
 # 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
 
-	zyphor build package pkg/v3/zyphor-grub-theme
-	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
+# 	zyphor build package pkg/v3/zyphor-grub-theme
+# 	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
 # 	---
 
