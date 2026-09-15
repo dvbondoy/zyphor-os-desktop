@@ -25,6 +25,3 @@ configs:
     "/home":
       row: 0
       col: 0
-    "/home/mark":
-      row: 0
-      col: 0
