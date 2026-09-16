@@ -132,8 +132,11 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-background-themes/
-	git commit -m "feat: add zyphor background themes package"
+	git add pkg/v3/zyphor-background-themes/DEBIAN/control
+	git commit -m "chore: update zyphor background themes package control"
+
+	git add pkg/v3/zyphor-background-themes/DEBIAN/postinst
+	git commit -m "fix: activate zyphor desktop theme via alternatives"
 
 push:
 	git push origin $(branch)
