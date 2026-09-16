@@ -8,14 +8,14 @@ case "$1" in
         if [ -d "$THEME" ]; then
             update-alternatives \
                 --install \
-                /etc/alternatives/desktop-themes \
-                desktop-themes \
+                /usr/share/desktop-base/active-theme \
+                desktop-theme \
                 "$THEME" \
                 100
 
             update-alternatives \
                 --set \
-                desktop-themes \
+                desktop-theme \
                 "$THEME"
         fi
         ;;
