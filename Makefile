@@ -132,11 +132,8 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-os-release/DEBIAN/control
-	git commit -m "chore: update zyphor os release package control"
-
-	git add pkg/v3/zyphor-os-release/DEBIAN/postinst
-	git commit -m "chore: update zyphor os release postinst"
+	git add pkg/v3/zyphor-cli/
+	git commit -m "feat: add zyphor cli package"
 
 push:
 	git push origin $(branch)
@@ -208,14 +205,17 @@ release:
 # 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
 # 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
 
-	zyphor build package pkg/v3/zyphor-os-release
-	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
+# 	zyphor build package pkg/v3/zyphor-os-release
+# 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
 
 # 	zyphor build package pkg/v3/zyphor-grub-theme
 # 	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-fastfetch-config
 # 	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
+
+	zyphor build package pkg/v3/zyphor-cli
+	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
 
 # 	---
 
