@@ -1,5 +1,5 @@
 Package: zyphor-os-release
-Version: 2.0.1-r6-alpha
+Version: 2.0.2-r7-alpha
 Section: base
 Priority: required
 Architecture: all
