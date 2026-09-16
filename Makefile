@@ -138,9 +138,6 @@ add:
 	git add pkg/v3/zyphor-os-release/DEBIAN/postinst
 	git commit -m "chore: update zyphor os release postinst"
 
-	git add -u pkg/v3/zyphor-os-release/etc/issue
-	git commit -m "chore: remove zyphor issue file"
-
 push:
 	git push origin $(branch)
 
