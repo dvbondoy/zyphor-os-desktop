@@ -132,8 +132,8 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-cli/
-	git commit -m "feat: add zyphor cli package"
+	git add pkg/v3/zyphor-background-themes/
+	git commit -m "feat: add zyphor background themes package"
 
 push:
 	git push origin $(branch)
@@ -214,8 +214,11 @@ release:
 # 	zyphor build package pkg/v3/zyphor-fastfetch-config
 # 	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
 
-	zyphor build package pkg/v3/zyphor-cli
-	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
+# 	zyphor build package pkg/v3/zyphor-cli
+# 	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
+
+	zyphor build package pkg/v3/zyphor-background-themes
+	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
 
 # 	---
 
