@@ -135,8 +135,12 @@ add:
 	git add pkg/v3/zyphor-background-themes/DEBIAN/control
 	git commit -m "chore: update zyphor background themes package control"
 
-	git add pkg/v3/zyphor-background-themes/DEBIAN/postinst
-	git commit -m "fix: activate zyphor desktop theme via alternatives"
+	git add -u pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/wallpaper/
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/lockscreen/
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/plymouth
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/wallpaper/
+	git commit -m "feat: expand zyphor desktop theme assets"
 
 push:
 	git push origin $(branch)
