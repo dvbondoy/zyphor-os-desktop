@@ -132,20 +132,11 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-background-themes/DEBIAN/control
-	git commit -m "chore: update zyphor background themes package control"
+	git add pkg/v3/zyphor-desktop-environment-theme/DEBIAN/control
+	git commit -m "chore: update zyphor desktop environment theme control"
 
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/grub-16x9.png
-	git commit -m "chore: update zyphor grub 16x9 background"
-
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/grub-4x3.png
-	git commit -m "chore: update zyphor grub 4x3 background"
-
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/login/background-nologo.svg
-	git commit -m "chore: update zyphor login background without logo"
-
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/login/background.svg
-	git commit -m "chore: update zyphor login background"
+	git add pkg/v3/zyphor-desktop-environment-theme/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+	git commit -m "chore: update zyphor xfce desktop configuration"
 
 push:
 	git push origin $(branch)
@@ -214,8 +205,8 @@ release:
 # 	zyphor build package pkg/v2/zyphor-grub-theme
 # 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
-# 	zyphor build package pkg/v3/zyphor-desktop-environment-theme
-# 	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
+	zyphor build package pkg/v3/zyphor-desktop-environment-theme
+	mv pkg/v3/zyphor-desktop-environment-theme.deb zyphor-desktop-environment-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-os-release
 # 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
@@ -229,8 +220,8 @@ release:
 # 	zyphor build package pkg/v3/zyphor-cli
 # 	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
 
-	zyphor build package pkg/v3/zyphor-background-themes
-	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
+# 	zyphor build package pkg/v3/zyphor-background-themes
+# 	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
 
 # 	---
 
