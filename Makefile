@@ -135,12 +135,17 @@ add:
 	git add pkg/v3/zyphor-background-themes/DEBIAN/control
 	git commit -m "chore: update zyphor background themes package control"
 
-	git add -u pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/wallpaper/
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/lockscreen/
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/plymouth
-	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/wallpaper/
-	git commit -m "feat: expand zyphor desktop theme assets"
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/grub-16x9.png
+	git commit -m "chore: update zyphor grub 16x9 background"
+
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/grub/grub-4x3.png
+	git commit -m "chore: update zyphor grub 4x3 background"
+
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/login/background-nologo.svg
+	git commit -m "chore: update zyphor login background without logo"
+
+	git add pkg/v3/zyphor-background-themes/usr/share/desktop-base/zyphor-os-theme/login/background.svg
+	git commit -m "chore: update zyphor login background"
 
 push:
 	git push origin $(branch)
