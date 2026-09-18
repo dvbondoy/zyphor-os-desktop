@@ -1,0 +1,7 @@
+Package: zyphor-desktop-environment
+Version: 2.2.1-r11-alpha
+Section: admin
+Priority: optional
+Architecture: all
+Maintainer: Mark Jason P. Espelita
+Description: Zyphor OS Desktop Environment Theme
