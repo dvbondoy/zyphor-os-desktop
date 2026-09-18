@@ -15,6 +15,12 @@
 #include <QFileInfo>
 #include <QDebug>
 #include <QTimer>
+#include <QStandardPaths>
+
+// Launched by absolute path so a hijacked PATH cannot substitute a
+// different binary; zywin is a hard package dependency and always
+// installs here.
+static constexpr auto ZYWIN_BINARY = "/usr/bin/zywin";
 
 class ZyWinUI : public QWidget
 {
@@ -488,38 +494,11 @@ private:
         );
 
 
-        QProcess *checkProcess = new QProcess(this);
-
-        connect(
-            checkProcess,
-            static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(
-                &QProcess::finished
-            ),
-            this,
-            [this, checkProcess](int exitCode, QProcess::ExitStatus exitStatus)
-            {
-                onWineCheckFinished(
-                    exitStatus == QProcess::NormalExit && exitCode == 0
-                );
-
-                checkProcess->deleteLater();
-            }
+        // Resolved in-process. Spawning "which" would itself be a PATH
+        // lookup, so a planted "which" could fake the result.
+        onWineCheckFinished(
+            !QStandardPaths::findExecutable("wine").isEmpty()
         );
-
-        connect(
-            checkProcess,
-            &QProcess::errorOccurred,
-            this,
-            [this, checkProcess](QProcess::ProcessError)
-            {
-                Q_UNUSED(checkProcess);
-
-                onWineCheckFinished(false);
-            }
-        );
-
-        // "which wine" exits 0 if a wine binary is on PATH.
-        checkProcess->start("which", QStringList() << "wine");
     }
 
 
@@ -693,11 +672,11 @@ private:
 
 
         qDebug() << "Executing:";
-        qDebug() << "zywin" << selectedFile;
+        qDebug() << ZYWIN_BINARY << selectedFile;
 
 
         process->start(
-            "zywin",
+            ZYWIN_BINARY,
             arguments
         );
 
