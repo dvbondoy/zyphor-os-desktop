@@ -47,7 +47,7 @@ configure_prompt
 # ---------------------------------
 
 OS_NAME="$(grep '^PRETTY_NAME=' /etc/os-release 2>/dev/null | cut -d= -f2- | tr -d '"')"
-BUILD="2026.09.08-r48"
+BUILD="2026.09.18-r1-alpha"
 
 echo ""
 

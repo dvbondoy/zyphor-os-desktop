@@ -4,5 +4,5 @@ Section: utils
 Priority: optional
 Architecture: all
 Depends: bash, curl, jq
-Maintainer: Mark Jason Espelita
+Maintainer: Mark Jason Espelita <markjasonespelita@gmail.com>
 Description: Zyphor OS CLI abstraction layer

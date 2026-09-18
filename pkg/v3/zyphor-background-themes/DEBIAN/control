@@ -1,9 +1,9 @@
 Package: zyphor-background-themes
-Version: 2.1.1-r8-alpha
+Version: 3.0.0-r9-alpha
 Section: x11
 Priority: optional
 Architecture: all
-Maintainer: Zyphor OS Project
+Maintainer: Mark Jason Espelita <markjasonespelita@gmail.com>
 Description: Zyphor OS desktop-base theme
  Zyphor OS desktop theme and background artwork.
  Provides the default Zyphor OS desktop background

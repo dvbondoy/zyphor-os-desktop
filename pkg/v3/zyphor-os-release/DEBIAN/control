@@ -1,9 +1,9 @@
 Package: zyphor-os-release
-Version: 2.0.2-r7-alpha
+Version: 3.0.0-r8-alpha
 Section: base
 Priority: required
 Architecture: all
-Maintainer: Mark Jason Espelita
+Maintainer: Mark Jason Espelita <markjasonespelita@gmail.com>
 Description: Zyphor OS release information
  Provides operating system identification and release metadata
  for Zyphor OS.
