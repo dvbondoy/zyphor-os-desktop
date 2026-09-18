@@ -132,11 +132,23 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-bashrc-config/
-	git commit -m "feat: add zyphor bashrc config package"
+	git add pkg/v2/updater/zor/DEBIAN/control
+	git commit -m "chore: update zor control"
 
-	git add pkg/v3/zyphor-desktop-environment/
-	git commit -m "feat: add zyphor desktop environment package"
+	git add pkg/v2/updater/zor/DEBIAN/postinst
+	git commit -m "chore: update zor postinst"
+
+	git add pkg/v2/updater/zwn/DEBIAN/control
+	git commit -m "chore: update zwn control"
+
+	git add pkg/v2/updater/zwn/usr/share/zyphor-whats-new/release.js
+	git commit -m "chore: update zyphor whats new release"
+
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/control
+	git commit -m "chore: update zyphor grub theme control"
+
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/postinst
+	git commit -m "fix: update zyphor grub theme postinst"
 
 push:
 	git push origin $(branch)
@@ -157,11 +169,11 @@ release:
 # 	zyphor build package pkg/v2/updater/updates
 # 	mv pkg/v2/updater/updates.deb zyphor-updates.deb
 
-# 	zyphor build package pkg/v2/updater/zor
-# 	mv pkg/v2/updater/zor.deb zyphor-os-release.deb
+	zyphor build package pkg/v2/updater/zor
+	mv pkg/v2/updater/zor.deb zyphor-os-release.deb
 
-# 	zyphor build package pkg/v2/updater/zwn
-# 	mv pkg/v2/updater/zwn.deb zyphor-whats-new.deb
+	zyphor build package pkg/v2/updater/zwn
+	mv pkg/v2/updater/zwn.deb zyphor-whats-new.deb
 
 # 	zyphor build package pkg/v2/zywin/zywin
 # 	mv pkg/v2/zywin/zywin.deb zywin.deb
@@ -202,8 +214,8 @@ release:
 # 	zyphor build package pkg/v2/zou/grub-screensaver-1
 # 	mv pkg/v2/zou/grub-screensaver-1.deb grub-screensaver-1.deb
 
-# 	zyphor build package pkg/v2/zyphor-grub-theme
-# 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
+	zyphor build package pkg/v2/zyphor-grub-theme
+	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
 # 	zyphor build package pkg/v3/zyphor-desktop-environment
 # 	mv pkg/v3/zyphor-desktop-environment.deb zyphor-desktop-environment-theme.deb
@@ -223,15 +235,15 @@ release:
 # 	zyphor build package pkg/v3/zyphor-background-themes
 # 	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
 
-	zyphor build package pkg/v3/zyphor-bashrc-config
-	mv pkg/v3/zyphor-bashrc-config.deb zyphor-bashrc-config.deb
+# 	zyphor build package pkg/v3/zyphor-bashrc-config
+# 	mv pkg/v3/zyphor-bashrc-config.deb zyphor-bashrc-config.deb
 
 
 # 	---
 
-# 	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
+	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
 
-	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
+# 	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
 
 # 	mv ./*.deb pkg/staging --verbose
 
