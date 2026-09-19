@@ -132,23 +132,20 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v2/updater/zor/DEBIAN/control
-	git commit -m "chore: update zor control"
+	git add pkg/v3/zyphor-cli/DEBIAN/control
+	git commit -m "chore: update zyphor CLI control"
 
-	git add pkg/v2/updater/zor/DEBIAN/postinst
-	git commit -m "chore: update zor postinst"
+	git add pkg/v3/zyphor-cli/usr/lib/zyphor/core/help
+	git commit -m "chore: update zyphor CLI help"
 
-	git add pkg/v2/updater/zwn/DEBIAN/control
-	git commit -m "chore: update zwn control"
+	git add -u pkg/v3/zyphor-cli/usr/lib/zyphor/setup/theme
+	git commit -m "chore: remove zyphor CLI theme setup"
 
-	git add pkg/v2/updater/zwn/usr/share/zyphor-whats-new/release.js
-	git commit -m "chore: update zyphor whats new release"
+	git add pkg/v3/zyphor-cli/usr/local/bin/zyphor
+	git commit -m "chore: update zyphor CLI command"
 
-	git add pkg/v2/zyphor-grub-theme/DEBIAN/control
-	git commit -m "chore: update zyphor grub theme control"
-
-	git add pkg/v2/zyphor-grub-theme/DEBIAN/postinst
-	git commit -m "fix: update zyphor grub theme postinst"
+	git add pkg/v3/zyphor-cli/usr/lib/zyphor/setup/theme.disabled
+	git commit -m "chore: add disabled zyphor theme setup"
 
 push:
 	git push origin $(branch)
