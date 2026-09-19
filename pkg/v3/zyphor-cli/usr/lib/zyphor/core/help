@@ -6,7 +6,7 @@ help() {
 
   echo ""
   echo "=================================="
-  echo "          ZYPHOR OS 3 CLI"
+  echo "          ZYPHOR OS 3 Bethany CLI"
   echo "=================================="
   echo ""
 
@@ -29,9 +29,9 @@ help() {
   printf "  %-30s %s\n" "setup dev android-studio" "Android Studio + Flutter"
   printf "  %-30s %s\n" "setup wine" "Install and configure Wine for Windows applications"
   printf "  %-30s %s\n" "setup web-server" "Setup Apache Web Server with SSL Certificate configuration and activation."
-  printf "  %-30s %s\n" "setup theme <target>" "Switch desktop theme"
-  printf "  %-30s %s\n" "setup theme light" "Light theme (Windows-10)"
-  printf "  %-30s %s\n" "setup theme dark" "Dark theme (Kali-Dark)"
+  # printf "  %-30s %s\n" "setup theme <target>" "Switch desktop theme"
+  # printf "  %-30s %s\n" "setup theme light" "Light theme (Windows-10)"
+  # printf "  %-30s %s\n" "setup theme dark" "Dark theme (Kali-Dark)"
   echo ""
 
   # ================= PACKAGE =================
@@ -119,8 +119,8 @@ help() {
   echo "  sudo zyphor setup dev node"
   echo "  sudo zyphor setup dev git"
   echo "  sudo zyphor setup wine"
-  echo "  zyphor setup theme light"
-  echo "  zyphor setup theme dark"
+  # echo "  zyphor setup theme light"
+  # echo "  zyphor setup theme dark"
   echo ""
   echo "----------------------------------"
   echo "NOTE"
