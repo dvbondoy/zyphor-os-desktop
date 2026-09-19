@@ -132,56 +132,23 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-archive-keyring/DEBIAN/control
-	git commit -m "chore: update zyphor archive keyring control"
+	git add pkg/v2/updater/zor/DEBIAN/control
+	git commit -m "chore: update zor control"
 
-	git add pkg/v3/zyphor-background-themes/DEBIAN/control
-	git commit -m "chore: update zyphor background themes control"
+	git add pkg/v2/updater/zor/DEBIAN/postinst
+	git commit -m "chore: update zor postinst"
 
-	git add pkg/v3/zyphor-bashrc-config/DEBIAN/control
-	git commit -m "chore: update zyphor bashrc config control"
+	git add pkg/v2/updater/zwn/DEBIAN/control
+	git commit -m "chore: update zwn control"
 
-	git add pkg/v3/zyphor-bashrc-config/etc/bashrc.d/zyphor.sh
-	git commit -m "chore: update zyphor bashrc configuration"
+	git add pkg/v2/updater/zwn/usr/share/zyphor-whats-new/release.js
+	git commit -m "chore: update zyphor whats new release"
 
-	git add pkg/v3/zyphor-cli/DEBIAN/control
-	git commit -m "chore: update zyphor cli control"
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/control
+	git commit -m "chore: update zyphor grub theme control"
 
-	git add pkg/v3/zyphor-cli/usr/lib/zyphor/pkg/cache
-	git commit -m "chore: update zyphor cli cache"
-
-	git add pkg/v3/zyphor-cli/usr/lib/zyphor/pkg/list
-	git commit -m "chore: update zyphor cli list"
-
-	git add pkg/v3/zyphor-cli/usr/lib/zyphor/pkg/remove
-	git commit -m "chore: update zyphor cli remove"
-
-	git add pkg/v3/zyphor-cli/usr/lib/zyphor/pkg/search
-	git commit -m "chore: update zyphor cli search"
-
-	git add pkg/v3/zyphor-desktop-environment/DEBIAN/control
-	git commit -m "chore: update zyphor desktop environment control"
-
-	git add -u pkg/v3/zyphor-desktop-environment/usr/share/backgrounds/xfce/xfce-x.svg
-	git commit -m "chore: remove xfce background"
-
-	git add pkg/v3/zyphor-fastfetch-config/DEBIAN/control
-	git commit -m "chore: update zyphor fastfetch config control"
-
-	git add pkg/v3/zyphor-os-release/DEBIAN/control
-	git commit -m "chore: update zyphor OS release control"
-
-	git add pkg/v3/zyphor-os-release/DEBIAN/postinst
-	git commit -m "chore: update zyphor OS release postinst"
-
-	git add pkg/v3/zyphor-os-release/etc/os-release
-	git commit -m "chore: update zyphor os-release"
-
-	git add pkg/v3/zyphor-repo-config/DEBIAN/control
-	git commit -m "chore: update zyphor repo config control"
-
-	git add pkg/v3/zyphor-repo-config/DEBIAN/postinst
-	git commit -m "chore: update zyphor repo config postinst"
+	git add pkg/v2/zyphor-grub-theme/DEBIAN/postinst
+	git commit -m "fix: update zyphor grub theme postinst"
 
 push:
 	git push origin $(branch)
