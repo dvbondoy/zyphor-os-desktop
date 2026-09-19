@@ -199,6 +199,8 @@ switch:
 
 release:
 
+# V2 UPDATES ===========================================================
+
 # 	zyphor build package pkg/v2/updater/updates
 # 	mv pkg/v2/updater/updates.deb zyphor-updates.deb
 
@@ -229,12 +231,6 @@ release:
 # 	zyphor build package pkg/v2/zrc
 # 	mv pkg/v2/zrc.deb zyphor-repo-config.deb
 
-	zyphor build package pkg/v3/zyphor-archive-keyring
-	mv pkg/v3/zyphor-archive-keyring.deb zyphor-archive-keyring.deb
-
-	zyphor build package pkg/v3/zyphor-repo-config
-	mv pkg/v3/zyphor-repo-config.deb zyphor-repo-config.deb
-
 # 	zyphor build package pkg/v2/zysh
 # 	mv pkg/v2/zysh.deb zysh.deb
 
@@ -250,23 +246,31 @@ release:
 	zyphor build package pkg/v2/zyphor-grub-theme
 	mv pkg/v2/zyphor-grub-theme.deb zyphor-grub-theme.deb
 
-	zyphor build package pkg/v3/zyphor-desktop-environment
-	mv pkg/v3/zyphor-desktop-environment.deb zyphor-desktop-environment-theme.deb
+# V3 UPDATES ===========================================================
 
-	zyphor build package pkg/v3/zyphor-os-release
-	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
+# 	zyphor build package pkg/v3/zyphor-archive-keyring
+# 	mv pkg/v3/zyphor-archive-keyring.deb zyphor-archive-keyring.deb
 
-	zyphor build package pkg/v3/zyphor-grub-theme
-	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
+# 	zyphor build package pkg/v3/zyphor-repo-config
+# 	mv pkg/v3/zyphor-repo-config.deb zyphor-repo-config.deb
 
-	zyphor build package pkg/v3/zyphor-fastfetch-config
-	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
+# 	zyphor build package pkg/v3/zyphor-desktop-environment
+# 	mv pkg/v3/zyphor-desktop-environment.deb zyphor-desktop-environment-theme.deb
 
-	zyphor build package pkg/v3/zyphor-cli
-	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
+# 	zyphor build package pkg/v3/zyphor-os-release
+# 	mv pkg/v3/zyphor-os-release.deb zyphor-os-release.deb
 
-	zyphor build package pkg/v3/zyphor-background-themes
-	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
+# 	zyphor build package pkg/v3/zyphor-grub-theme
+# 	mv pkg/v3/zyphor-grub-theme.deb zyphor-grub-theme.deb
+
+# 	zyphor build package pkg/v3/zyphor-fastfetch-config
+# 	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
+
+# 	zyphor build package pkg/v3/zyphor-cli
+# 	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
+
+# 	zyphor build package pkg/v3/zyphor-background-themes
+# 	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
 
 # 	zyphor build package pkg/v3/zyphor-bashrc-config
 # 	mv pkg/v3/zyphor-bashrc-config.deb zyphor-bashrc-config.deb
@@ -276,11 +280,7 @@ release:
 
 	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
 
-<<<<<<< HEAD
-# 	mv ./*.deb ../zyphor-os.github.io/babbage-lts/pool/main/z --verbose
-=======
-	mv ./*.deb ../zyphor-os.github.io/bethany-lts/pool/main/z --verbose
->>>>>>> 3291a97207fb3425ad6092662dd6954051f1092c
+# 	mv ./*.deb ../zyphor-os.github.io/bethany-lts/pool/main/z --verbose
 
 # 	mv ./*.deb pkg/staging --verbose
 
