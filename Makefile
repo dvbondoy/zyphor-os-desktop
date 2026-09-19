@@ -98,7 +98,7 @@ devbuild:
 	sudo xorriso -as mkisofs \
 	  -iso-level 3 \
 	  -full-iso9660-filenames \
-	  -volid "Kali Live" \
+	  -volid "Zyphor Operating System" \
 	  -o ../new-iso/zyphor-custom.iso \
 	  -eltorito-boot isolinux/isolinux.bin \
 	    -eltorito-catalog isolinux/boot.cat \
