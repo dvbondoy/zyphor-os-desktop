@@ -165,8 +165,8 @@ release:
 # 	zyphor build package pkg/v2/zywin/zywin
 # 	mv pkg/v2/zywin/zywin.deb zywin.deb
 
-	zyphor build package pkg/v2/zywin-ui/zywin-ui
-	mv pkg/v2/zywin-ui/zywin-ui.deb zywin-ui.deb
+# 	zyphor build package pkg/v2/zywin-ui/zywin-ui
+# 	mv pkg/v2/zywin-ui/zywin-ui.deb zywin-ui.deb
 
 # 	zyphor build package pkg/v2/zywelcome/zywelcome
 # 	mv pkg/v2/zywelcome/zywelcome.deb zywelcome.deb
@@ -203,8 +203,8 @@ release:
 # 	zyphor build package pkg/v3/zyphor-archive-keyring
 # 	mv pkg/v3/zyphor-archive-keyring.deb zyphor-archive-keyring.deb
 
-# 	zyphor build package pkg/v3/zyphor-repo-config
-# 	mv pkg/v3/zyphor-repo-config.deb zyphor-repo-config.deb
+	zyphor build package pkg/v3/zyphor-repo-config
+	mv pkg/v3/zyphor-repo-config.deb zyphor-repo-config.deb
 
 # 	zyphor build package pkg/v3/zyphor-desktop-environment
 # 	mv pkg/v3/zyphor-desktop-environment.deb zyphor-desktop-environment-theme.deb
@@ -218,8 +218,8 @@ release:
 # 	zyphor build package pkg/v3/zyphor-fastfetch-config
 # 	mv pkg/v3/zyphor-fastfetch-config.deb zyphor-fastfetch-config.deb
 
-# 	zyphor build package pkg/v3/zyphor-cli
-# 	mv pkg/v3/zyphor-cli.deb zyphor-cli.deb
+	zyphor build package pkg/v3/apps/zyphor-cli
+	mv pkg/v3/apps/zyphor-cli.deb ../zyphor-os.github.io/bethany-lts/pool/apps/z --verbose
 
 # 	zyphor build package pkg/v3/zyphor-background-themes
 # 	mv pkg/v3/zyphor-background-themes.deb zyphor-background-themes.deb
@@ -230,9 +230,9 @@ release:
 
 # 	---
 
-	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
+# 	mv ./*.deb ../zyphor-os.github.io/ada-lovelace-lts/pool/main/z --verbose
 
-# 	mv ./*.deb ../zyphor-os.github.io/bethany-lts/pool/main/z --verbose
+	mv ./*.deb ../zyphor-os.github.io/bethany-lts/pool/main/z --verbose
 
 # 	mv ./*.deb pkg/staging --verbose
 
