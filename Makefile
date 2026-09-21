@@ -211,9 +211,9 @@ release:
 
 # BETHANY MAIN
 
-	zyphor build package pkg/v3/zyphor-repo-config
+# 	zyphor build package pkg/v3/zyphor-repo-config
 # 	cp pkg/v3/zyphor-repo-config.deb ../zyphor-os.github.io/bethany-lts/pool/main/z --verbose
-	mv pkg/v3/zyphor-repo-config.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
+# 	mv pkg/v3/zyphor-repo-config.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
 
 # 	zyphor build package pkg/v3/zyphor-archive-keyring
 # 	mv pkg/v3/zyphor-archive-keyring.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
@@ -239,6 +239,9 @@ release:
 # BETHANY APPS
 # 	zyphor build package pkg/v3/apps/zyphor-cli
 # 	mv pkg/v3/apps/zyphor-cli.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+	zyphor build package pkg/v3/apps/zylearn/zylearn
+	mv pkg/v3/apps/zylearn/zylearn.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
 # 	---
 
