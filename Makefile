@@ -132,17 +132,23 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/apps/zyphor-cli/DEBIAN/control
-	git commit -m "chore: update zyphor CLI package control"
+	git add pkg/v3/apps/zycamera-launcher/
+	git commit -m "feat: add zycamera launcher package"
 
-	git add pkg/v3/apps/zyphor-cli/usr/lib/zyphor/core/help
-	git commit -m "docs: update zyphor CLI help"
+	git add pkg/v3/apps/zyphor-command-center-web/
+	git commit -m "feat: add zyphor command center web package"
 
-	git add pkg/v3/zyphor-repo-config/DEBIAN/control
-	git commit -m "chore: update zyphor repo config control"
+	git add pkg/v3/apps/zyphor-command-center/
+	git commit -m "feat: add zyphor command center package"
 
-	git add pkg/v3/zyphor-repo-config/DEBIAN/postinst
-	git commit -m "fix: update zyphor repo config postinst"
+	git add pkg/v3/apps/zyphor-whats-new/
+	git commit -m "feat: add zyphor whats new package"
+
+	git add pkg/v3/apps/zywin-ui/
+	git commit -m "feat: add zywin UI package"
+
+	git add pkg/v3/apps/zywin/
+	git commit -m "feat: add zywin package"
 
 push:
 	git push origin $(branch)
@@ -237,11 +243,30 @@ release:
 # 	mv pkg/v3/zyphor-bashrc-config.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
 
 # BETHANY APPS
+
 # 	zyphor build package pkg/v3/apps/zyphor-cli
 # 	mv pkg/v3/apps/zyphor-cli.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
-	zyphor build package pkg/v3/apps/zylearn/zylearn
-	mv pkg/v3/apps/zylearn/zylearn.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+# 	zyphor build package pkg/v3/apps/zylearn/zylearn
+# 	mv pkg/v3/apps/zylearn/zylearn.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+	
+# 	zyphor build package pkg/v3/apps/zywin/zywin
+# 	mv pkg/v3/apps/zywin/zywin.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+# 	zyphor build package pkg/v3/apps/zywin-ui/zywin-ui
+# 	mv pkg/v3/apps/zywin-ui/zywin-ui.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+	zyphor build package pkg/v3/apps/zycamera-launcher/zycamera-launcher
+	mv pkg/v3/apps/zycamera-launcher/zycamera-launcher.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+	zyphor build package pkg/v3/apps/zyphor-command-center-web
+	mv pkg/v3/apps/zyphor-command-center-web.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+	zyphor build package pkg/v3/apps/zyphor-command-center
+	mv pkg/v3/apps/zyphor-command-center.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+
+	zyphor build package pkg/v3/apps/zyphor-whats-new
+	mv pkg/v3/apps/zyphor-whats-new.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
 # 	---
 
