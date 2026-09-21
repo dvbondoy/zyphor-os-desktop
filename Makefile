@@ -132,23 +132,11 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/apps/zycamera-launcher/
-	git commit -m "feat: add zycamera launcher package"
+	git add pkg/v3/apps/zycamera-launcher/zycamera-launcher/DEBIAN/control
+	git commit -m "chore: update zycamera launcher control"
 
-	git add pkg/v3/apps/zyphor-command-center-web/
-	git commit -m "feat: add zyphor command center web package"
-
-	git add pkg/v3/apps/zyphor-command-center/
-	git commit -m "feat: add zyphor command center package"
-
-	git add pkg/v3/apps/zyphor-whats-new/
-	git commit -m "feat: add zyphor whats new package"
-
-	git add pkg/v3/apps/zywin-ui/
-	git commit -m "feat: add zywin UI package"
-
-	git add pkg/v3/apps/zywin/
-	git commit -m "feat: add zywin package"
+	git add pkg/v3/apps/zyphor-command-center/DEBIAN/control
+	git commit -m "chore: update zyphor command center control"
 
 push:
 	git push origin $(branch)
@@ -259,14 +247,14 @@ release:
 	zyphor build package pkg/v3/apps/zycamera-launcher/zycamera-launcher
 	mv pkg/v3/apps/zycamera-launcher/zycamera-launcher.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
-	zyphor build package pkg/v3/apps/zyphor-command-center-web
-	mv pkg/v3/apps/zyphor-command-center-web.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+# 	zyphor build package pkg/v3/apps/zyphor-command-center-web
+# 	mv pkg/v3/apps/zyphor-command-center-web.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
 	zyphor build package pkg/v3/apps/zyphor-command-center
 	mv pkg/v3/apps/zyphor-command-center.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
-	zyphor build package pkg/v3/apps/zyphor-whats-new
-	mv pkg/v3/apps/zyphor-whats-new.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
+# 	zyphor build package pkg/v3/apps/zyphor-whats-new
+# 	mv pkg/v3/apps/zyphor-whats-new.deb ../zyphor-os.github.io/bethany-lts/bethany-apps/pool/main/z --verbose
 
 # 	---
 
