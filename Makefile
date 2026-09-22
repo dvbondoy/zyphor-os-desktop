@@ -132,8 +132,11 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-plymouth/
-	git commit -m "feat: add zyphor Plymouth package"
+	git add pkg/v3/zyphor-plymouth/DEBIAN/control
+	git commit -m "chore: update zyphor Plymouth control"
+
+	git add pkg/v3/zyphor-plymouth/DEBIAN/postinst
+	git commit -m "fix: update zyphor Plymouth postinst"
 
 push:
 	git push origin $(branch)
