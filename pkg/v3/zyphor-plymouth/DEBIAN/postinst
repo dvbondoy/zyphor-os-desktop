@@ -16,7 +16,7 @@ fi
 
 # Set Zyphor as the default Plymouth theme
 if command -v plymouth-set-default-theme >/dev/null 2>&1; then
-    plymouth-set-default-theme -R zyphor
+    plymouth-set-default-theme zyphor
 fi
 
 exit 0
