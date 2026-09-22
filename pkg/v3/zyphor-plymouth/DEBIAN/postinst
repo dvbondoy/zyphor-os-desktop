@@ -3,7 +3,7 @@ set -e
 
 THEME_DIR="/usr/share/plymouth/themes/zyphor"
 
-# Set ownership
+# Set ownership and permissions
 if [ -d "$THEME_DIR" ]; then
     chown -R root:root "$THEME_DIR"
 
@@ -14,9 +14,26 @@ if [ -d "$THEME_DIR" ]; then
     find "$THEME_DIR" -type f -exec chmod 644 {} \;
 fi
 
+# Configure GRUB for Plymouth
+if [ -f /etc/default/grub ]; then
+    sed -i \
+        's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/' \
+        /etc/default/grub
+fi
+
 # Set Zyphor as the default Plymouth theme
 if command -v plymouth-set-default-theme >/dev/null 2>&1; then
     plymouth-set-default-theme zyphor
+fi
+
+# Regenerate GRUB configuration
+if command -v update-grub >/dev/null 2>&1; then
+    update-grub
+fi
+
+# Rebuild initramfs
+if command -v update-initramfs >/dev/null 2>&1; then
+    update-initramfs -u -k all
 fi
 
 exit 0
