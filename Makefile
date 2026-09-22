@@ -132,56 +132,8 @@ add:
 	git add Makefile
 	git commit -m "build: update repository automation"
 
-	git add pkg/v3/zyphor-desktop-environment/DEBIAN/control
-	git commit -m "chore: update zyphor desktop environment control"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/desktop/accels.scm
-	git commit -m "chore: update XFCE desktop accelerators"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/notes/gtk.css
-	git commit -m "chore: update XFCE notes styling"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/panel/launcher-13/17891875681.desktop
-	git commit -m "chore: update XFCE panel launcher 13"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/panel/launcher-14/17891875692.desktop
-	git commit -m "chore: update XFCE panel launcher 14"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/panel/launcher-15/17891875693.desktop
-	git commit -m "chore: update XFCE panel launcher 15"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/panel/launcher-16/17891875694.desktop
-	git commit -m "chore: update XFCE panel launcher 16"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/displays.xml
-	git commit -m "chore: update XFCE display configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
-	git commit -m "chore: update Thunar configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml
-	git commit -m "chore: update XFCE app finder configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-	git commit -m "chore: update XFCE keyboard shortcuts"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml
-	git commit -m "chore: update XFCE notification configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
-	git commit -m "chore: update XFCE panel configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screenshooter.xml
-	git commit -m "chore: update XFCE screenshooter configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
-	git commit -m "chore: update XFCE window manager configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-	git commit -m "chore: update XFCE settings configuration"
-
-	git add pkg/v3/zyphor-desktop-environment/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
-	git commit -m "feat: add XFCE power manager configuration"
+	git add pkg/v3/zyphor-plymouth/
+	git commit -m "feat: add zyphor Plymouth package"
 
 push:
 	git push origin $(branch)
@@ -257,8 +209,8 @@ release:
 # 	zyphor build package pkg/v3/zyphor-archive-keyring
 # 	mv pkg/v3/zyphor-archive-keyring.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
 
-	zyphor build package pkg/v3/zyphor-desktop-environment
-	mv pkg/v3/zyphor-desktop-environment.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
+# 	zyphor build package pkg/v3/zyphor-desktop-environment
+# 	mv pkg/v3/zyphor-desktop-environment.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
 
 # 	zyphor build package pkg/v3/zyphor-os-release
 # 	mv pkg/v3/zyphor-os-release.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
@@ -274,6 +226,9 @@ release:
 
 # 	zyphor build package pkg/v3/zyphor-bashrc-config
 # 	mv pkg/v3/zyphor-bashrc-config.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
+
+	zyphor build package pkg/v3/zyphor-plymouth
+	mv pkg/v3/zyphor-plymouth.deb ../zyphor-os.github.io/bethany-lts/bethany/pool/main/z --verbose
 
 # BETHANY APPS
 
