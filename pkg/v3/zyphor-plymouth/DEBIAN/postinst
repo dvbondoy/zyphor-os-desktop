@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+THEME_DIR="/usr/share/plymouth/themes/zyphor"
+
+# Set ownership
+if [ -d "$THEME_DIR" ]; then
+    chown -R root:root "$THEME_DIR"
+
+    # Directories need execute permission to be traversable
+    find "$THEME_DIR" -type d -exec chmod 755 {} \;
+
+    # Theme files
+    find "$THEME_DIR" -type f -exec chmod 644 {} \;
+fi
+
+# Set Zyphor as the default Plymouth theme
+if command -v plymouth-set-default-theme >/dev/null 2>&1; then
+    plymouth-set-default-theme -R zyphor
+fi
+
+exit 0
